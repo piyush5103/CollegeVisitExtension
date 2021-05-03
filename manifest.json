@@ -1,0 +1,15 @@
+{
+	"manifest_version": 2,
+	"name": "College2Calendar",
+	"version": "0.1.0",
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["content.js"]
+		}
+	],
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_title": "College2Calendar"
+	}
+}
