@@ -4,15 +4,21 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+        <link rel="stylesheet" href="styles.css" />
         <title>College2Calendar</title>
     </head>
     <body>
-        <div style="display: flex; flex-direction: row">
-            <a href="#" id="schedule" style="width: 50%">Schedule Event</a>
-            <button id="refresh" style="width: 50%">Check Again</button>
+        <div class="header-div">
+            <span></span>
+            <button class="refresh-button" id="refresh">
+                <span class="reload">&#x21bb;</span>
+            </button>
         </div>
-        <span id="invalid_span"></span>
+
+        <div class="action-div">
+            <a class="action-button" href="#" id="schedule">Schedule Event</a>
+        </div>
+        <div class="details-div" id="event-details"></div>
         <script src="popup.js" charset="UTF-8"></script>
     </body>
 </html>

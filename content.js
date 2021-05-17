@@ -179,6 +179,10 @@ const uniDomains = {
 	"uwstout": "UW–Stout",
 	"uwsuper": "UW–Superior",
 	"uww": "UW–Whitewater",
+	"bu": "BostonU",
+	"uillinois": "UofI",
+	"illinois": "UIUC",
+
 }
 
 //uc merced only uses zoom

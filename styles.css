@@ -1,0 +1,42 @@
+#event-details {
+    width: 25em;
+}
+
+.action-button {
+    font-family: sans-serif;
+    font-size: 1em;
+    text-decoration: none;
+    color: white;
+    background-color: green;
+    padding: 1em 1.8em;
+    border-radius: 1.6em;
+    transition-duration: 0.2s;
+}
+
+.action-button:hover {
+    background-color: darkgreen;
+}
+
+.refresh-button {
+    width: fit-content;
+    margin-right: 0.5em;
+    margin-top: 0.5em;
+    border: none;
+    background: none;
+}
+
+.reload {
+    font-family: Lucida Sans Unicode;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.header-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-div {
+    display: flex;
+    justify-content: center;
+}

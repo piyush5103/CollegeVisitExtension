@@ -11,25 +11,37 @@ function loaded() {
 	}
 	function receiveDate(response) {
 		if (!response.success) {
+			try {
+				document.body.removeChild(document.getElementById('event-details'))
+			} catch (err) { }
+			const eventDetails = document.createElement('div')
+			eventDetails.setAttribute('id', 'event-details')
+			document.body.appendChild(eventDetails)
+
 			const invalidSpan = document.createElement('h3')
-			invalidSpan.textContent = 'No working here. Try again somewhere else.'
+			invalidSpan.innerText = 'No working here. Try again somewhere else.'
 			const erdet = document.createElement('h3')
-			erdet.textContent = `noForm: ${response.noForm}, otherError: ${response.otherError}, nonEduDomain: ${response.nonEduDomain}`
-			document.body.appendChild(invalidSpan)
-			document.body.appendChild(erdet)
+			erdet.innerText = `noForm: ${response.noForm} \notherError: ${response.otherError} \nnonEduDomain: ${response.nonEduDomain}`
+			document.getElementById('event-details').appendChild(invalidSpan)
+			document.getElementById('event-details').appendChild(erdet)
+			document.getElementById('schedule').setAttribute('href', '#')
+			document.getElementById('schedule').setAttribute('target', '')
 		} else {
+			const eventDetails = document.createElement('div')
+			eventDetails.setAttribute('id', 'event-details')
+			document.body.appendChild(eventDetails)
 
 			const date = document.createElement('h3')
-			date.textContent = `date: ${response.startDate}\n${response.endDate}`
-			document.body.appendChild(date)
+			date.innerText = `date: ${response.startDate}\n${response.endDate}`
+			document.getElementById('event-details').appendChild(date)
 
 			const university = document.createElement('h3')
-			university.textContent = `university: ${response.university}`
-			document.body.appendChild(university)
+			university.innerText = `university: ${response.university}`
+			document.getElementById('event-details').appendChild(university)
 
 			const timezone = document.createElement('h3')
-			timezone.textContent = `timezone: ${response.timezone}`
-			document.body.appendChild(timezone)
+			timezone.innerText = `timezone: ${response.timezone}`
+			document.getElementById('event-details').appendChild(timezone)
 
 			const googleURL = new URL('https://calendar.google.com/calendar/render')
 			googleURL.searchParams.append("action", "TEMPLATE")
@@ -38,8 +50,8 @@ function loaded() {
 			googleURL.searchParams.append('ctz', `${response.timezone}`)
 
 			const title = document.createElement('h3')
-			title.textContent = `title: ${response.title}, \n ${googleURL}`
-			document.body.appendChild(title)
+			title.innerText = `title: ${response.title}, \n ${googleURL}`
+			document.getElementById('event-details').appendChild(title)
 
 			document.getElementById('schedule').setAttribute('href', googleURL)
 			document.getElementById('schedule').setAttribute('target', '_blank')
