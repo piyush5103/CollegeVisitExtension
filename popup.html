@@ -1,24 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles.css" />
-        <title>College2Calendar</title>
-    </head>
-    <body>
-        <div class="header-div">
-            <span></span>
-            <button class="refresh-button" id="refresh">
-                <span class="reload">&#x21bb;</span>
-            </button>
-        </div>
-
-        <div class="action-div">
-            <a class="action-button" href="#" id="schedule">Schedule Event</a>
-        </div>
-        <div class="details-div" id="event-details"></div>
-        <script src="popup.js" charset="UTF-8"></script>
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>College2Calendar</title>
+	</head>
+	<body>
+		<div class="details-div" id="event-details"></div>
+		<script src="popup.js" charset="UTF-8"></script>
+		<div id="button-bar">
+			<div class="button-bar">
+				<a
+					class="button-bar-indiv button-bar-indiv-link schedule-button"
+					style="background-color: rgb(105, 228, 105); width: 59%"
+					id="schedule"
+					>Schedule Event</a
+				>
+				<a
+					class="button-bar-indiv button-bar-indiv-link refresh-button"
+					style="background-color: lightgray; width: 39%"
+					id="refresh"
+					href="#"
+					>Check again</a
+				>
+			</div>
+		</div>
+		<div id="detail-bar">
+			<div style="display: flex; font-size: 1.3em; flex-direction: column">
+				<div class="detail-row">
+					<div class="col-each col-label">
+						<span>University</span>
+					</div>
+					<div class="col-each col-response">
+						<span id="uni-name">uni name</span>
+					</div>
+				</div>
+				<div class="detail-row">
+					<div class="col-each col-label">
+						<span>Event Name</span>
+					</div>
+					<div class="col-each col-response">
+						<span id="event-name">uni name</span>
+					</div>
+				</div>
+				<div class="detail-row">
+					<div class="col-each col-label">
+						<span>Start Time</span>
+					</div>
+					<div class="col-each col-response">
+						<span id="start-time">uni name</span>
+					</div>
+				</div>
+				<div class="detail-row">
+					<div class="col-each col-label">
+						<span>End Time</span>
+					</div>
+					<div class="col-each col-response">
+						<span id="end-time">uni name</span>
+					</div>
+				</div>
+				<div class="detail-row">
+					<div class="col-each col-label" style="border-bottom: none">
+						<span>Timezone<br />(Location)</span>
+					</div>
+					<div class="col-each col-response" style="border-bottom: none">
+						<span id="timezone">uni name</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
