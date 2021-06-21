@@ -3,6 +3,10 @@
 	--white: #ffffff;
 }
 
+body {
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
 a {
 	text-decoration: none;
 }
@@ -133,4 +137,26 @@ tr:hover {
 	border-bottom: 1px solid var(--table-outline);
 	display: flex;
 	align-items: center;
+}
+
+.error-list-item {
+	font-size: 14px;
+	margin-bottom: 12px;
+	list-style-type: none;
+}
+
+.error-bar-title {
+	text-align: center;
+}
+
+.error-bar-subtitle {
+	font-size: 16px;
+	margin-bottom: 0px;
+}
+
+.error-domain,
+.error-form,
+.error-other,
+.error-bar {
+	display: none;
 }

@@ -10,6 +10,7 @@
 	<body>
 		<div class="details-div" id="event-details"></div>
 		<script src="popup.js" charset="UTF-8"></script>
+
 		<div id="button-bar">
 			<div class="button-bar">
 				<a
@@ -27,6 +28,7 @@
 				>
 			</div>
 		</div>
+
 		<div id="detail-bar">
 			<div style="display: flex; font-size: 1.3em; flex-direction: column">
 				<div class="detail-row">
@@ -70,6 +72,31 @@
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<div id="error-bar" class="error-bar">
+			<h2 class="error-bar-title">Sorry, couldn't find anything.</h2>
+			<h3 class="error-bar-subtitle">Possible reason(s):</h3>
+			<ul style="padding-left: 5px; margin-top: 10px">
+				<li id="error-domain" class="error-domain error-list-item">
+					This extension only works on .edu domains with limited exceptions like
+					<a href="https://mitadmissions.org" target="_blank">mitadmissions.org</a>.<br /><br />To keep this
+					extension as non-intrusive as possible, this extension will only attempt to identify events on pages
+					under the .edu extension. A complete list of supported exceptions is coming soon, so stay tuned for
+					that.
+				</li>
+				<li id="error-form" class="error-form error-list-item">
+					No event or form found on this page.<br /><br />This is a supported domain. However, the extension
+					can't see any event registration form on this page. It's possible that this is the confirmation page
+					for a registered event, the details for which would only be listed on the previous page
+					(registration page).
+				</li>
+				<li id="error-other" class="error-other error-list-item">
+					Something went wrong.<br /><br />No need to worry, it's possible that there's something wrong with
+					the webpage or the browser or the extension just isn't having a good day. We're always working on
+					making sure that you don't see this message again, so just sit back and relax.
+				</li>
+			</ul>
 		</div>
 	</body>
 </html>
