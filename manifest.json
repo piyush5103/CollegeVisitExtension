@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "College2Calendar",
-	"description": "Add admission events directly to Google Calendar.",
+	"description": "Add college admission events directly to Google Calendar.",
 	"version": "0.1.0",
 	"content_scripts": [
 		{
